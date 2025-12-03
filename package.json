@@ -15,39 +15,3 @@
     "node": ">=14.0.0"
   }
 }
-```
-
----
-
-### File 2: `.gitignore`
-
-**What it is**: Tells Git which files NOT to upload to GitHub (like secrets and large folders)
-
-**How to create:**
-Create a new file named `.gitignore` (yes, with the dot at the start) and paste:
-```
-node_modules/
-.env
-.DS_Store
-*.log
-```
-
-**Why?**
-- `node_modules/` - Too large, will be reinstalled automatically
-- `.env` - Contains your secret tokens (NEVER upload this!)
-- `.DS_Store` - Mac system file
-- `*.log` - Log files
-
----
-
-### File 3: `.env.example`
-
-**What it is**: A template showing what environment variables are needed (WITHOUT real tokens)
-
-**How to create:**
-Create a new file named `.env.example` and paste:
-```
-VERIFY_TOKEN=your_secret_verify_token_here
-WHATSAPP_TOKEN=your_whatsapp_access_token_here
-PHONE_NUMBER_ID=your_phone_number_id_here
-PORT=3000
